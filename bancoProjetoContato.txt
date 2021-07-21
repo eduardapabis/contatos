@@ -1,0 +1,16 @@
+CREATE DATABASE projeto_contato;
+USE projeto_contato;
+
+CREATE TABLE contatos(
+	id INTEGER AUTO_INCREMENT,
+	nome VARCHAR(100),
+	email VARCHAR(100),
+	CONSTRAINT pk_tbcontatos PRIMARY KEY(id)
+);
+
+CREATE TABLE usuarios(
+	id INTEGER AUTO_INCREMENT,
+	email VARCHAR(100),
+	senha VARCHAR(32),
+	CONSTRAINT pk_tbusuarios PRIMARY KEY(id)
+);

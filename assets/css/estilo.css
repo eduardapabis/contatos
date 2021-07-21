@@ -1,0 +1,179 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+.container {
+    width: 1000px;
+    margin-left: 200px;
+    margin-top: 50px;
+}
+
+/*tabela*/
+table, td {
+    border: 1px solid #000;
+    line-height: 40px;
+}
+table {
+    border-collapse: collapse;
+}
+
+/*header*/
+header {
+    width: 100%;
+    background: #2c2c2c;
+}
+header ul {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+header ul li {
+    list-style: none;
+    position: relative;
+    padding: 10px 15px;
+    transition: 0.5s;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(255,255,255,.2);
+}
+header ul li:hover {
+    background: #2196f3;
+}
+header ul li:last-child {
+    border-right: none;
+}
+header ul li {
+    color: #000;
+}
+header ul li a {
+    text-decoration: none;
+    padding: 0 20px;
+    color: #fff;
+}
+header ul li ul {
+    position: absolute;
+    top: 39px; 
+    left: 0;
+    background: #2c2c2c;
+    display: block;
+    width: 123px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+header ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+}
+header ul li ul li {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+/*login*/
+.login {
+	position: absolute;
+	top: 150px;
+	left: 600px;
+}
+.login input {
+	border-radius: 2px;
+	border: 1px solid blue;
+}
+
+/*modal*/
+.modal_bg {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+	background-color: rgba(0, 0, 0, 0.6);
+	display: none;
+}
+.modal {
+	position: absolute;
+	width: 400px;
+	height: 300px;
+	background-color: #FFFFFF;
+	z-index: 999;
+	top: 50px;
+	left: 50%;
+	margin-left: -200px;
+	padding-left: 20px;
+}
+.crud {
+    padding-top: 30px;
+}
+
+/*botoes*/
+.crud button {
+    border-radius: 5px;
+    padding: 5px;
+}
+.btn {
+    padding: 5px;
+    border-radius: 5px;
+    border: none; 
+}
+.btn-adicionar {
+    background-color: #5cb85c;
+}
+.btn-editar {
+    background-color: #418bca;
+}
+.btn-excluir {
+    background-color: #d9534f;
+}
+.btn-adicionar a, .btn-editar a, .btn-excluir a {
+    color: #fff;
+    text-decoration: none;
+}
+.btn-editar, .btn-excluir {
+    position: relative;
+    left: 60px;
+}
+.btn-adicionarEEditar {
+    background-color: #337ab7;
+    color: #fff;
+}
+.close a {
+	color: #000;
+}
+.entrar {
+    background-color: #0097f5;
+    padding: 5px;
+    color: #fff;
+}
+@media screen and (min-width: 375px) and (max-width: 667px) {
+    .login {
+    left: 240px;
+    }
+    .container {        
+    width: 100%;
+    margin-left: 0;
+    }
+    header ul li ul {
+        width: 122px;
+    }
+    table {
+        width: 400px;
+    }
+    .btn-editar, .btn-excluir {
+        left: 25px;
+    }
+}
+@media screen and (min-width: 670px) and (max-width: 1200px) {
+    .container {
+    width: 100%;
+    margin-left: 0;
+    }
+    header ul li ul {
+        width: 122px;
+    }
+}
